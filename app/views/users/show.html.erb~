@@ -1,0 +1,14 @@
+<% provide(:title, @user.name) %>
+ <% if flash[:success] && user.admin == true%>
+    <%= flash[:success] %>
+  <% end %>
+<h1><%= @user.name %></h1>
+<% if session[:remember_token] != nil %>
+<%= link_to "Sign out", signout_path, method: "delete"%>
+<%= link_to "User Index", index_path%>
+<% if session[:remember_token] == @user.id %>
+<%= link_to "Settings", edit_user_path(session[:remember_token])%>
+<% end%>
+<% else %>
+<%= link_to "Sign in", signin_path%>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>User Index</h1>
+<% current = User.find(session[:remember_token]) %>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, user %>
+      <% if session[:remember_token] != user.id && current.admin == true%>
+      <%= link_to "Delete User", user, method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
