@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # Amazon S3 gem for music database
 gem 'aws-s3', :require => 'aws/s3'
 
+# Bootstrap CSS gem
+gem 'bootstrap-sass', '2.3.2.0'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
