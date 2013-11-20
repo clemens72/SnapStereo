@@ -5,6 +5,7 @@ SnapStereo::Application.routes.draw do
   match '/signup', to: 'users#new', via: 'get'
   match '/users/:id', to: 'users#show', via: 'get'
   match '/signin',  to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/index', to: 'users#index', via: 'get'
  
  
