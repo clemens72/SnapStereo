@@ -61,18 +61,17 @@ p {
 
 #logo {
   float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
+  margin-right: 60px;
+  height: 57px;
+  width: 300px;
+  background-image: url('logo.png');
   &:hover {
-    color: white;
-    text-decoration: none;
+    opacity: 0.5;
   }
+}
+
+.nav.pull-right {
+  margin-top: 10px;
 }
 
 /* footer */
