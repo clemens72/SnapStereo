@@ -1,6 +1,12 @@
-<% provide(:title, "Sign In") %>
-<h1>Sign In</h1>
- <% if flash.now[:error] %>
+<% provide(:title, 'Home') %>
+<div class="center hero-unit">
+  <h1>Welcome to SnapStereo!</h1>
+  
+  <h2>
+    SnapStereo lets you rate songs in a quick and easy way. Sign in below to get started!
+  </h2>
+  
+  <% if flash.now[:error] %>
     <%= flash.now[:error] %>
   <% end %>
     <%= form_for(:session, url: sessions_path) do |f| %>
@@ -12,4 +18,10 @@
       <%= f.password_field :password %>
 
       <%= f.submit "Sign in"%>
+      
     <% end %>
+    <%= button_to "Sign Up", signup_path, :method => "get" =%>
+   
+</div>
+
+
