@@ -3,6 +3,7 @@
 <h2>Update Account Information </h2>
 <p>Enter your updated information below. Before submitting saves, please enter your current password or a new password if needed. </p>
     <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %> 
       <%= f.label :name %>
       <%= f.text_field :name %>
 
