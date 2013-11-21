@@ -1,10 +1,9 @@
 SnapStereo::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  root 'static_pages#home'
+  root 'sessions#new'
   match '/signup',    to: 'users#new',          via: 'get'
   match '/users/:id', to: 'users#show',         via: 'get'
-  match '/signin',    to: 'sessions#new',       via: 'get'
   match '/signout',   to: 'sessions#destroy',   via: 'delete'
   match '/index',     to: 'users#index',        via: 'get'
   match '/help',      to: 'static_pages#help',  via: 'get'
