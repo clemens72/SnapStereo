@@ -1,9 +1,8 @@
-<% provide(:title, "Edit Profile") %>
-<h1>Edit Profile</h1>
+<h1>Settings</h1>
 
+<h2>Update Account Information </h2>
+<p>Enter your updated information below. Before submitting saves, please enter your current password or a new password if needed. </p>
     <%= form_for(@user) do |f| %>
-      
-
       <%= f.label :name %>
       <%= f.text_field :name %>
 
@@ -16,7 +15,11 @@
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Save Changes", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Save Changes" %>
     <% end %>
+
+<hr>
+<h2>Delete Account</h2>
+<p>To delete your account, email the webmaster requesting to do so.</P>
 
    
