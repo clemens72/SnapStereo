@@ -8,6 +8,12 @@ Bundler.require(:default, Rails.env)
 
 module SnapStereo
   class Application < Rails::Application
+    
+    AWS::S3::Base.establish_connection!(
+      :access_key_id     => 'AKIAI3GI4TT6DUB6PYBQ',
+      :secret_access_key => '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'
+    )
+		BUCKET = 'soundsnapbucket'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
